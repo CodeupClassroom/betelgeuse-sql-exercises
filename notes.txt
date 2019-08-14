@@ -2,12 +2,26 @@ CREATE DATABASE IF NOT EXISTS database_name;
 CREATE USER 'username'@'hostname' IDENTIFIED BY 'password';
 CREATE TABLE IF NOT EXISTS table_name(columns...);
 USE database_name;
+SELECT database();
 DROP USER 'username'@'hostname';
 DROP DATABASE IF EXISTS database_name;
 DROP TABLE IF EXISTS table_name;
+TRUNCATE table_name;
 SHOW DATABASES;
 SHOW TABLES;
 SHOW CREATE DATABASE database_name;
 SHOW CREATE TABLE table_name;
 DESCRIBE table_name;
-SELECT database();
+SELECT * FROM table_name;
+SELECT col_1, col_2, ... FROM table_name
+    [WHERE col_1='val_1']
+    [AND col_2=val_2]
+    [OR col_2=val_2];
+INSERT INTO table_name (col_1, col_2, ...)
+    VALUES (val_1, val_2, ...);
+UPDATE table_name
+    SET col_1 = val_1
+    WHERE id = id_1;
+DELETE FROM table_name
+    WHERE id = id_1;
+
