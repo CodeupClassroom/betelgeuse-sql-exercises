@@ -7,15 +7,14 @@ limit 100;
 
 select * from employees where first_name = 'Aamer' and last_name = 'Fraisse';
 
-
 -- get me the biggest employee number = most recent
 select max(emp_no) from employees;
 
 -- the longest working employee in the company
 select min(emp_no) from employees;
 
+
 select emp_no, avg(datediff(now(), hire_date))
 from employees
 group by emp_no
 limit 10;
-
