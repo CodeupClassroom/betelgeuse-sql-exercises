@@ -1,3 +1,5 @@
+use codeup_test_db;
+
 select u.name as 'user_name', r.name as 'role_name'
 from users AS u
          join roles AS r ON u.role_id = r.id;
@@ -13,6 +15,7 @@ from users u
 select * from users;
 select * from roles;
 
+use employees;
 
 select emp_no from employees order by emp_no desc limit 1;
 
